@@ -2,7 +2,11 @@ name: Rust
 
 on:
   push:
-    paths: "projects/*/**"
+    branches:
+      - master
+    pull_request:
+      paths:
+      - "projects/*/**"
 
 jobs:
   build:
