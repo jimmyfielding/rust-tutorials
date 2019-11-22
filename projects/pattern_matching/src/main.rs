@@ -28,6 +28,12 @@ fn main() {
         3 => println!("three"),
         _ => (),
     }
+
+    let another_u8_value = Some(3);
+
+    if let Some(3) = another_u8_value {
+        println!("three");
+    }
 }
 
 fn value_in_cents(coin: Coin) -> u8 {
