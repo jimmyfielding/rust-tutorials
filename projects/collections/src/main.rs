@@ -2,6 +2,12 @@ fn main() {
     vectors();
 }
 
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
+}
+
 fn vectors() {
     let v: Vec<i32> = Vec::new();
     let v1 = vec![1, 2, 3];
@@ -21,4 +27,19 @@ fn vectors() {
         Some(third) => println!("The third element is {}", third),
         None => println!("There is no third element."),
     }
+
+    let v3 = vec1![100, 32, 57];
+    for i in &v3 {
+        println!("{}", i);
+    }
+
+    for i in &mut v {
+        *i += 50;
+    }
+
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Text(String::from("blue")),
+        SpreadsheetCell::Float(10.12),
+    ];
 }
